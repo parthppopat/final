@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.css" />
+</head>
+
+<body>
+  <div class="p-8">
+    <strong class="text-2xl">How does this work?</strong> USCACforK is a closed community of the US investors. We buy cryptocurrencies in the US exchange on behalf of investors in South Korea and send them to the SK investors wallet. You (SK investors) need to post your desired coin type, amount, and price. The price needs to be higher than the price in the US. We then contact you individually to do the transactions. You can pay via either credit card settlement, or international transfer. Based on your transaction records and our decision you can do this arbitrage transactions multiple times 
+  </div>    
+
+  <div class="space-y-8">
+    <div class="my-16">
+      <div class="text-center">
+
+        <div class="font-bold text-2xl">
+          Post your demand 
+        </div>
+        <div>
+          (Exchanges you are using / Preferred coin you want to buy / amounts / Your bid price per 1 coin / userName)
+        </div>
+        <div>
+          (e.g., Bithumb / BTC / 0.65/ $35000 / ABC)
+        </div>
+        <div>
+          <form class="w-full mt-8">
+            <input type="text" id="cryptoPostsBody" name="cryptoPostsBody" placeholder="exchange/coin/amounts/bid" class="my-2 p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+            <button id="post-button" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl">Post</button>
+          </form>
+        </div>
+
+      <div class="cryptoPosts">
+        <!-- cryptoPosts rendered from JavaScript -->
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+    <div class="sign-in-or-sign-out"></div>
+
+  <!-- Put the Firebase config here -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+
+  <!-- FirebaseUI Auth -->
+  <!-- https://firebaseopensource.com/projects/firebase/firebaseui-web/ -->
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD-RLxCwIkAJqAkFyIpGw5F7ZqI_-Kkj6I",
+      authDomain: "kiei-451-ad584.firebaseapp.com",
+      projectId: "kiei-451-ad584",
+      storageBucket: "kiei-451-ad584.appspot.com",
+      messagingSenderId: "946230721329",
+      appId: "1:946230721329:web:ef0987433537e53ec0ce10"
+    } // replace
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index2.js"></script>
+</body>
+
+</html>
